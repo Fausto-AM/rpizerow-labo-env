@@ -7,7 +7,7 @@
 */
 static int __init ej01_module_init(void) {
 	// Completar
-
+	printk("alvarezmollo_fausto_ej01: Hola desde Kernel!");
 	// Salio todo bien
 	return 0;
 }
@@ -17,7 +17,7 @@ static int __init ej01_module_init(void) {
 */
 static void __exit ej01_module_exit(void) {
 	// Completar
-
+	printk("alvarezmollo_fausto_ej01: Chau desde Kernel!");
 }
 
 // Registro funciones de inicializacion y salida
@@ -26,5 +26,5 @@ module_exit(ej01_module_exit);
 
 // Informacion del modulo (completar lo que corresponda)
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("");
-MODULE_DESCRIPTION("");
+MODULE_AUTHOR("ALVAREZ MOLLO, FAUSTO");
+MODULE_DESCRIPTION("Cada vez que entrás al kernel manda un mensaje de bienvenida. Cada vez que salís manda un mensaje de despedida.");
