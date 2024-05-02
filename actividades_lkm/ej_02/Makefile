@@ -1,7 +1,7 @@
 # Nombre del archivo
 FILE := main
 # Nombre del modulo (reemplazar nombre y apellido)
-MODN := apellido_nombre_ej02
+MODN := AlvarezMollo_Fausto_ej02
 # Directorio para archivos de compilacion
 MDIR := $(PWD)/build
 # Directorio donde estan los modulos del kernel
