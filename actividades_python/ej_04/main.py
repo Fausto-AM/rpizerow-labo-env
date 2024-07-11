@@ -53,15 +53,21 @@ while True :
 		if (red.value>1):
 			red.value = 1
 		time.sleep(1)
-	# El brillo del LED azul aumenra y disminuye dependiendo de si la diferencia de la temperatura del
-	# Termisyor es mayor de la del Potenciómetro hasta un máximo de 5 grados, en la que será el máximo posible.
-	if (PvalV<TvalV):
+	# El brillo del LED azul aumenta y disminuye dependiendo de si la diferencia de la temperatura del
+	# Termistor es mayor de la del Potenciómetro hasta un máximo de 5 grados, en la que será el máximo posible.
+	elif (PvalV<TvalV):
 		blue.value = (TvalV-PvalV)*0.2
 
 		if (blue.value>1):
 			blue.value = 1
 		time.sleep(1)
-
+	# En caso de que la temperatura configurada sea igual a la que sea medida, el valor del brillo los LEDs
+	# será 0.
+	else:
+		blue.value = 0
+		red.value = 0
+		time.sleep(1)
+		
 	# Muestra los valores que el usuario desea conocer.
 	print("Valor del Termistor {0:.3f} V".format(TvalV))
 	print("Valor del Potenciómetro {0:.3f} V".format(PvalV))
